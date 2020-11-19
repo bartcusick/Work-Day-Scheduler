@@ -25,6 +25,29 @@ body {
     white-space: pre-wrap;
   }
   
+  .btn {
+    border-left: 1px solid black;
+    border-radius: 0px 15px 15px 0px;
+    background-color: #06AED5;
+    color: white;
+    border: none;
+  }
+  
+  .btn i:hover {
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+  }
+  .clear {
+    /* padding: 10px; */
+    border-radius: 10px 10px 10px 10px;
+    background-color: #06AED5;
+    text-align: center;
+    height: 30px;
+    width: 150px;
+    color: white;
+    border: none;
+  }
+  
   .timeBlock{
     text-align: center;
     border-radius: 15px 0px 0px 15px;
@@ -58,25 +81,3 @@ body {
     color: white;
   }
   
-  .saveBtn {
-    border-left: 1px solid black;
-    border-radius: 0px 15px 15px 0px;
-    background-color: #06AED5;
-    color: white;
-    border: none;
-  }
-  
-  .saveBtn i:hover {
-    font-size: 20px;
-    transition: all .3s ease-in-out;
-  }
-  .clearBtn {
-    /* padding: 10px; */
-    border-radius: 10px 10px 10px 10px;
-    background-color: #06AED5;
-    text-align: center;
-    height: 30px;
-    width: 150px;
-    color: white;
-    border: none;
-  }
