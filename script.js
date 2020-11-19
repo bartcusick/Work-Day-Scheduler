@@ -1,8 +1,3 @@
-// var timeBlock = document.querySelector("#hour");
-// // var block = document.querySelector("#status");
-// // var timeBlock = $('#timeBlock');
-// console.log(timeBlock);
-
 $(document).ready(function () {
     var now = moment();
     // displays date in format: Thursday, October 8th
@@ -13,19 +8,18 @@ $(document).ready(function () {
 
     //Arr = which button was clicked
     var buttonArr = [
-        { inputId: '9', btnId: 'saveBtn9' },
-        { inputId: '10', btnId: 'saveBtn10' },
-        { inputId: '11', btnId: 'saveBtn11' },
-        { inputId: '12', btnId: 'saveBtn12' },
-        { inputId: '1', btnId: 'saveBtn1' },
-        { inputId: '2', btnId: 'saveBtn2' },
-        { inputId: '3', btnId: 'saveBtn3' },
-        { inputId: '4', btnId: 'saveBtn4' },
-        { inputId: '5', btnId: 'saveBtn5' }
+        { inputId: '9', btnId: 'btn9' },
+        { inputId: '10', btnId: 'btn10' },
+        { inputId: '11', btnId: 'btn11' },
+        { inputId: '12', btnId: 'btn12' },
+        { inputId: '1', btnId: 'btn1' },
+        { inputId: '2', btnId: 'btn2' },
+        { inputId: '3', btnId: 'btn3' },
+        { inputId: '4', btnId: 'btn4' },
+        { inputId: '5', btnId: 'btn5' }
     ];
     //for loop that changes the color of blocks color based off of the time
     for (var i = 0; i < blockArr.length; i++) {
-        //Keep items displayed on page
         var idStr = blockArr[i].toString();
         var idP = '#' + idStr;
         var hourText = JSON.parse(localStorage.getItem(idP));
@@ -45,13 +39,13 @@ $(document).ready(function () {
         }
     };
 });
-$(".saveBtn").on("click", function () {
-    var btnID = (this.id).replace('saveBtn', '');
+$(".btn").on("click", function () {
+    var btnID = (this.id).replace('btn', '');
     var textBlock = document.getElementById(btnID);
     var textSave = textBlock.value;
     localStorage.setItem("#" + btnID, JSON.stringify(textSave));
 });
-$(".clearBtn").on("click", function () { 
+$(".clear").on("click", function () { 
     console.log("This is clicking");
     localStorage.clear();
     location.reload();
